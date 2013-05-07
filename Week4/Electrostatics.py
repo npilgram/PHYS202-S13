@@ -11,3 +11,9 @@ def dipolePotential(x,y,q,d):
     Vxy = pointPotential(x,y,q,-d/2.,0.)-pointPotential(x,y,q,d/2.,0.)
     return Vxy
     
+def pointField(x,y,q,Xq,Yq):
+    """Returns the tuple of the electric field compontents(E_x,E_y) of charge q at position (Xq,Yq), x and y are arrays"""
+    k =  8.9875517873681764*10.**9. #Nm^2/C^2
+    E_x = (k*q*(x-Xq))/((((x-Xq)**2)+((y-Yq)**2))**(1./2.))
+    E_y = (k*q*(y-Yq))/((((x-Xq)**2)+((y-Yq)**2))**(1./2.))
+    return (E_x,E_y)
