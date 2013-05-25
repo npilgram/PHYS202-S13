@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[     33815,        741]
-NotebookOptionsPosition[     33054,        712]
-NotebookOutlinePosition[     33392,        727]
-CellTagsIndexPosition[     33349,        724]
+NotebookDataLength[     36568,        808]
+NotebookOptionsPosition[     35809,        779]
+NotebookOutlinePosition[     36145,        794]
+CellTagsIndexPosition[     36102,        791]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -136,7 +136,8 @@ Cell[BoxData["25"], "Output",
    3.577999270870363*^9, 3.57799961878227*^9, 3.577999676985388*^9, 
    3.577999838482959*^9, 3.578000055336931*^9, {3.5780002197199717`*^9, 
    3.578000235349066*^9}, 3.578000422102829*^9, 3.578073378741475*^9, 
-   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476358068*^9}],
+   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476358068*^9, 
+   3.578425989681027*^9}],
 
 Cell[BoxData["30"], "Output",
  CellChangeTimes->{
@@ -146,7 +147,8 @@ Cell[BoxData["30"], "Output",
    3.577999270870363*^9, 3.57799961878227*^9, 3.577999676985388*^9, 
    3.577999838482959*^9, 3.578000055336931*^9, {3.5780002197199717`*^9, 
    3.578000235349066*^9}, 3.578000422102829*^9, 3.578073378741475*^9, 
-   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476366535*^9}],
+   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476358068*^9, 
+   3.578425989727077*^9}],
 
 Cell[BoxData[
  FractionBox[
@@ -158,7 +160,8 @@ Cell[BoxData[
    3.577999270870363*^9, 3.57799961878227*^9, 3.577999676985388*^9, 
    3.577999838482959*^9, 3.578000055336931*^9, {3.5780002197199717`*^9, 
    3.578000235349066*^9}, 3.578000422102829*^9, 3.578073378741475*^9, 
-   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476377013*^9}],
+   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476358068*^9, 
+   3.578425989745203*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -189,7 +192,8 @@ Cell[BoxData[
    3.577999270870363*^9, 3.57799961878227*^9, 3.577999676985388*^9, 
    3.577999838482959*^9, 3.578000055336931*^9, {3.5780002197199717`*^9, 
    3.578000235349066*^9}, 3.578000422102829*^9, 3.578073378741475*^9, 
-   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476506151*^9}],
+   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476358068*^9, 
+   3.578425989763638*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -224,7 +228,8 @@ Cell[BoxData[
    3.577999270870363*^9, 3.57799961878227*^9, 3.577999676985388*^9, 
    3.577999838482959*^9, 3.578000055336931*^9, {3.5780002197199717`*^9, 
    3.578000235349066*^9}, 3.578000422102829*^9, 3.578073378741475*^9, 
-   3.578169883658313*^9, 3.5781700149986057`*^9, 3.5781834765200167`*^9}],
+   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476358068*^9, 
+   3.578425989781576*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -257,7 +262,8 @@ Cell[BoxData[
    3.577999270870363*^9, 3.57799961878227*^9, 3.577999676985388*^9, 
    3.577999838482959*^9, 3.578000055336931*^9, {3.5780002197199717`*^9, 
    3.578000235349066*^9}, 3.578000422102829*^9, 3.578073378741475*^9, 
-   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476533474*^9}]
+   3.578169883658313*^9, 3.5781700149986057`*^9, 3.578183476358068*^9, 
+   3.57842598987154*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -453,7 +459,7 @@ etf+zd+2lXjtR9B/fs6dxSV09T+LXhoQZZr4z7EsuxVX2Zvhf2uEYcc=
   PlotRangeClipping->True,
   PlotRangePadding->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{3.578073587181079*^9, 3.578073630153401*^9, 
-  3.578170036220458*^9, 3.578183480782792*^9}]
+  3.578170036220458*^9, 3.578183480782792*^9, 3.578425996132448*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -470,7 +476,51 @@ Cell[BoxData[
         RowBox[{"NDSolve", "[", 
          RowBox[{
           RowBox[{"{", 
-           RowBox[{"ode1", ",", "ode2", ",", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"x", "''"}], "[", "t", "]"}], "\[Equal]", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "g"}], " ", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"x", "'"}], "[", "t", "]"}], "/", 
+                 RowBox[{"vt", "^", "2"}]}]}], ")"}], " ", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], " ", "+", 
+                " ", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], 
+               "]"}]}]}], ",", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"y", "''"}], "[", "t", "]"}], " ", "\[Equal]", " ", 
+             RowBox[{
+              RowBox[{"-", "g"}], " ", 
+              RowBox[{"(", 
+               RowBox[{"1", " ", "+", " ", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"y", "'"}], "[", "t", "]"}], "/", 
+                   RowBox[{"vt", "^", "2"}]}], ")"}], " ", 
+                 RowBox[{"Sqrt", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], " ", "+",
+                    " ", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], 
+                  "]"}]}]}], ")"}]}]}], ",", " ", 
             RowBox[{
              RowBox[{"x", "[", "0", "]"}], "\[Equal]", "x0"}], ",", 
             RowBox[{
@@ -620,14 +670,17 @@ Cell[BoxData[
    3.578183586384774*^9, {3.578183661351059*^9, 3.578183661980515*^9}, {
    3.5781841982109547`*^9, 3.57818422023284*^9}, {3.578184318418769*^9, 
    3.578184339718484*^9}, {3.5781844336089077`*^9, 3.578184433739524*^9}, {
-   3.578184514246593*^9, 3.578184521061019*^9}}],
+   3.578184514246593*^9, 3.578184521061019*^9}, {3.5784258812986727`*^9, 
+   3.578425897670982*^9}, 3.578425942745812*^9, {3.5784260844712963`*^9, 
+   3.578426111682994*^9}, {3.578426175725651*^9, 3.578426189759551*^9}, {
+   3.578426257522043*^9, 3.578426261096623*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`tf$$ = 106., $CellContext`th$$ = 
-    Rational[1, 18] Pi, $CellContext`V$$ = 439, $CellContext`vt$$ = 
-    135, $CellContext`x0$$ = 0, $CellContext`y0$$ = 1, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`tf$$ = 10, $CellContext`th$$ = 
+    Rational[1, 6] Pi, $CellContext`V$$ = 10, $CellContext`vt$$ = 
+    10, $CellContext`x0$$ = 0, $CellContext`y0$$ = 0, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -639,22 +692,22 @@ Cell[BoxData[
        Hold[$CellContext`y0$$], 0, "initial hight (m)"}, 0, 20}, {{
        Hold[$CellContext`tf$$], 10, "time (s)"}, 0, 200}}, Typeset`size$$ = {
     500., {148., 152.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`vt$4662$$ = 
-    0, $CellContext`V$4663$$ = 0, $CellContext`th$4664$$ = 
-    0, $CellContext`x0$4665$$ = 0, $CellContext`y0$4666$$ = 
-    0, $CellContext`tf$4667$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`vt$2772$$ = 
+    0, $CellContext`V$2773$$ = 0, $CellContext`th$2774$$ = 
+    0, $CellContext`x0$2775$$ = 0, $CellContext`y0$2776$$ = 
+    0, $CellContext`tf$2777$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`tf$$ = 10, $CellContext`th$$ = 
         Rational[1, 6] Pi, $CellContext`V$$ = 10, $CellContext`vt$$ = 
         10, $CellContext`x0$$ = 0, $CellContext`y0$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`vt$$, $CellContext`vt$4662$$, 0], 
-        Hold[$CellContext`V$$, $CellContext`V$4663$$, 0], 
-        Hold[$CellContext`th$$, $CellContext`th$4664$$, 0], 
-        Hold[$CellContext`x0$$, $CellContext`x0$4665$$, 0], 
-        Hold[$CellContext`y0$$, $CellContext`y0$4666$$, 0], 
-        Hold[$CellContext`tf$$, $CellContext`tf$4667$$, 0]}, 
+        Hold[$CellContext`vt$$, $CellContext`vt$2772$$, 0], 
+        Hold[$CellContext`V$$, $CellContext`V$2773$$, 0], 
+        Hold[$CellContext`th$$, $CellContext`th$2774$$, 0], 
+        Hold[$CellContext`x0$$, $CellContext`x0$2775$$, 0], 
+        Hold[$CellContext`y0$$, $CellContext`y0$2776$$, 0], 
+        Hold[$CellContext`tf$$, $CellContext`tf$2777$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -662,7 +715,20 @@ Cell[BoxData[
          Typeset`skipInitDone$$}, 
       "Body" :> ($CellContext`g = 9.8; 
        Module[{$CellContext`result$ = 
-          NDSolve[{$CellContext`ode1, $CellContext`ode2, $CellContext`x[
+          NDSolve[{
+            Derivative[
+              2][$CellContext`x][$CellContext`t] == ((-$CellContext`g) (
+                Derivative[
+                 1][$CellContext`x][$CellContext`t]/$CellContext`vt$$^2)) 
+              Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+                Derivative[1][$CellContext`y][$CellContext`t]^2], 
+             Derivative[
+              2][$CellContext`y][$CellContext`t] == (-$CellContext`g) (
+               1 + (Derivative[
+                  1][$CellContext`y][$CellContext`t]/$CellContext`vt$$^2) 
+                Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+                  Derivative[
+                    1][$CellContext`y][$CellContext`t]^2]), $CellContext`x[
               0] == $CellContext`x0$$, 
              Derivative[1][$CellContext`x][0] == $CellContext`V$$ 
               Cos[$CellContext`th$$], $CellContext`y[0] == $CellContext`y0$$, 
@@ -693,7 +759,7 @@ $CellContext`V$$ Sin[$CellContext`th$$] $CellContext`t - (1/
          Appearance -> "Labeled"}, {{$CellContext`tf$$, 10, "time (s)"}, 0, 
          200, Appearance -> "Labeled"}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{545., {299., 304.}},
+     ImageSizeCache->{545., {255., 260.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -707,11 +773,12 @@ $CellContext`V$$ Sin[$CellContext`th$$] $CellContext`t - (1/
   3.5781711111956673`*^9, 3.578171386852538*^9, 3.578183487235815*^9, 
    3.57818353044843*^9, 3.578183599730198*^9, 3.578183664960958*^9, {
    3.578184204322283*^9, 3.5781842228609877`*^9}, {3.578184324951865*^9, 
-   3.578184344069264*^9}, 3.5781844355132647`*^9, 3.578184526627823*^9}]
+   3.578184344069264*^9}, 3.5781844355132647`*^9, 3.578184526627823*^9, 
+   3.5784259530602903`*^9, 3.5784260235646877`*^9, 3.578426268049155*^9}]
 }, Open  ]]
 },
 WindowSize->{1366, 706},
-WindowMargins->{{24, Automatic}, {-50, Automatic}},
+WindowMargins->{{0, Automatic}, {Automatic, 22}},
 FrontEndVersion->"8.0 for Linux x86 (64-bit) (October 10, 2011)",
 StyleDefinitions->"Default.nb"
 ]
@@ -728,20 +795,20 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[567, 22, 4432, 106, 138, "Input"],
-Cell[5002, 130, 549, 8, 29, "Output"],
-Cell[5554, 140, 549, 8, 29, "Output"],
-Cell[6106, 150, 596, 10, 45, "Output"],
-Cell[6705, 162, 1176, 29, 41, "Output"],
-Cell[7884, 193, 1306, 33, 47, "Output"],
-Cell[9193, 228, 1165, 31, 29, "Output"]
+Cell[5002, 130, 575, 9, 29, "Output"],
+Cell[5580, 141, 575, 9, 29, "Output"],
+Cell[6158, 152, 622, 11, 45, "Output"],
+Cell[6783, 165, 1202, 30, 41, "Output"],
+Cell[7988, 197, 1330, 34, 47, "Output"],
+Cell[9321, 233, 1190, 32, 29, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10395, 264, 1437, 32, 48, "Input"],
-Cell[11835, 298, 9326, 157, 206, "Output"]
+Cell[10548, 270, 1437, 32, 48, "Input"],
+Cell[11988, 304, 9348, 157, 206, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[21198, 460, 7163, 162, 228, "Input"],
-Cell[28364, 624, 4674, 85, 620, "Output"]
+Cell[21373, 466, 9008, 209, 246, "Input"],
+Cell[30384, 677, 5409, 99, 532, "Output"]
 }, Open  ]]
 }
 ]
