@@ -1,4 +1,4 @@
-function [m,merr,b,berr] = WeightedLinearLeastSquaresFit(x,y,w);
+function [m,merr,b,berr] = WeightedLSQFit(x,y,w)
 % Weighted Linear Least Squares Fit
 %   Take in arrays representing (x,y) values for a set of linearly varying data and an array of weights w.
 %   Perform a weighted linear least squares regession. Return the resulting slope and intercept parameters of
@@ -15,25 +15,24 @@ w_sum = sum(w);
     m = ((w_sum.*wxy_sum)-(wx_sum.*wy_sum))./((w_sum.*wxsqr_sum)-(wx_sum.^2));
     b = ((wxsqr_sum.*wy_sum)-(wx_sum.*wxy_sum))./((w_sum.*wxsqr_sum)-(wx_sum.^2));
     
-    if sum(w)./len(w)==1;
-        x_ave = sum(x)./len(x);
-        y_ave = sum(y)./len(y);
-        xsqr_ave = sum((x.*x))./len((x.*x));
-        xy_ave = sum((x.*y))./len((x.*y));
+    if sum(w)/length(w)==1;
+        x_ave = sum(x)./length(x);
+        xsqr_ave = sum((x.*x))./length((x.*x));
         
         uncer = zeros(len(x));
-        for i in range(len(x));
-            uncer[i]=y[i]-((m.*x(i))+b);
+        for i = 1:len(x)
+            uncer(i) = y(i)-((m.*x(i))+b);
+        end
         
         uncer_sqr_ave = sum((uncer.*uncer))./len((uncer.*uncer));
     
-        m_err = sqrt((1./(len(x)-2.)).*(uncer_sqr_ave./(xsqr_ave -(x_ave.^2))));
-        b_err = sqrt((1./(len(x)-2.)).*((uncer_sqr_ave.*xsqr_ave)./(xsqr_ave -(x_ave.^2))));
+        merr = sqrt((1./(len(x)-2.)).*(uncer_sqr_ave./(xsqr_ave -(x_ave.^2))));
+        berr = sqrt((1./(len(x)-2.)).*((uncer_sqr_ave.*xsqr_ave)./(xsqr_ave -(x_ave.^2))));
+   
     
-    else:
-        m_err = sqrt(w_sum./((w_sum.*wxsqr_sum)-(wx_sum.^2)));
-        b_err = sqrt(wxsqr_sum./((w_sum.*wxsqr_sum)-(wx_sum.^2)));
-    
-
+    else
+        merr = sqrt(w_sum./((w_sum.*wxsqr_sum)-(wx_sum.^2)));
+        berr = sqrt(wxsqr_sum./((w_sum.*wxsqr_sum)-(wx_sum.^2)));
+    end
 end
 

@@ -22,11 +22,15 @@ hold off
 %plot(x,x.^2)
 %%
 w = ey.^-2;
-[m,mer,b,berr]=WeightedLSQFit(x,y,w);
+[m,merr,b,berr] = WeightedLSQFit(x,y,w);
+
 
 %%
 hold on
 %%
 fit = m*x+b;
 plot(x,fit)
+%%
+m,merr
+b,berr
 
